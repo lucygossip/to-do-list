@@ -1,0 +1,103 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+hr {
+  width: 100%;
+  border: 1px solid #a880a8;
+}
+.todo-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  background: #dfa0df;
+  margin: 0 auto;
+  min-height: 100vh;
+  height: auto;
+  padding: 50px;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 5px;
+  border: 3px solid #bf80bf;
+  width: 75%;
+  max-width: 800px;
+  background: #dfc0df;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 0 0 5px 1px rgba(50, 50, 50, 0.3);
+}
+.col h1 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+label {
+  margin-top: 30px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+}
+
+#clear-all, input[type="submit"] {
+  margin: 0 auto;
+  padding: 15px;
+  background: #cf90cf;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  width: 50%;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+#clear-all {
+  width: min-content;
+  border-radius: 10px;
+}
+input[type="submit"]:hover, #clear-all:hover {
+  filter: contrast(115%);
+}
+#item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 0.5px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #efe0ef;
+}
+.delete-button {
+  background: #a00;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .todo-list {
+    padding: 20px;
+  }
+  .col {
+    width: 100%;
+  }
+}
